@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Forms em HTML</h1>
+    <hr>
+    <form action="https://httpbin.org/anything" method="get">
+        <p>
+            <label for="nome">Nome:</label>
+            <br>
+            <input type="text" id="nome" name="nome" size="30" maxlength="30" placeholder="Inserir nome">
+        </p>
+
+        <p>
+            <label for="apelido">Apelido:</label>
+            <br>
+            <input type="text" id="apelido" name="apelido">
+        </p>
+
+        <!--NOTA: id é para o frontend (CSS); name é para o backend-->
+
+        <p>
+            <input type="submit">
+        </p>
+    </form>
+</body>
+</html>
