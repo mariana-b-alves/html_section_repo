@@ -9,23 +9,103 @@
     <h1>Forms em HTML</h1>
     <hr>
     <form action="https://httpbin.org/anything" method="get">
-        <p>
+        <article>
             <label for="nome">Nome:</label>
             <br>
-            <input type="text" id="nome" name="nome" size="30" maxlength="30" placeholder="Inserir nome">
-        </p>
+            <input type="text" id="nome" name="nome" size="30" maxlength="30" placeholder="Inserir nome 🦅" autocomplete="off" autofocus required>
+            <span>"Preenchimento Obrigatório"</span>
 
-        <p>
+            <br>
+        <!--NOTA UX - Importante colocar autofocus para que o utilizador não precise de clicar no form para começar a escrever; o primeiro form já fica selecionado.-->
+
+        <!--NOTA UX 2 - Important também colocar indicações concretas para preenchimento obrigatório para que o utilador entenda bem que deve prencher o campo obrigatoriamente; só um asterístico não lhe diz nada / deixa-o confuso -->
             <label for="apelido">Apelido:</label>
             <br>
-            <input type="text" id="apelido" name="apelido">
-        </p>
+            <input type="text" id="apelido" name="apelido" disabled>
+        </article>
+
+        <article>
+            <label for="comentarios">Comentários</label><br>
+            <textarea name="comentarios" id="comentarios" cols="50" rows="10"></textarea>
+        </article>
 
         <!--NOTA: id é para o frontend (CSS); name é para o backend-->
 
+        <article>
+            <h1>Que estilo de música preferes?</h1>
+            <input type="radio" id="rock" name="musica" value="rock"></input>
+            <label for="rock">Rock</label>
+
+            <input type="radio" id="pop" name="musica" value="pop"></input>
+            <label for="pop">Pop</label>
+
+            <input type="radio" id="triphop" name="musica" value="triphop"></input>
+            <label for="triphop">Trip-Hop</label>
+        </article>
+
+        <article>
+            <h1>Que serviço utiliza para ouvir música?</h1>
+            <input type="checkbox" name="servico" id="servico" value="spotify">
+            <label for="spotify" checked>Spotify</label>
+
+            <input type="checkbox" name="servico" id="servico" value="apple">
+            <label for="apple">Apple Music</label>
+
+            <input type="checkbox" name="servico" id="servico" value="youtube">
+            <label for="youtube">Youtube</label>
+        </article>
+
+        <article>
+            <h1>Em qu device costuma ouvir música?</h1>
+            <p>Pode escolher vários com o "Ctrl"</p>
+            <select name="device2" id="device" multiple size="5">
+                <option value="nome">...</option>
+                <option value="walkman">Walkman</option>
+                <option value="discman">Discman</option>
+                <option value="ipod">iPod</option>
+                <option value="radio">Radio</option>
+                <option value="computador">PC</option>
+                <option value="tv">TV</option>
+            </select>
+        </article>
+
+        <article>
+            <h1>Qual é o browser que mais utiliza?</h1>
+            <label for="browser">Browser:</label>
+            <input type="text" id="browser" name="browser" list="browser">
+            <datalist id="browsers">
+                <option value="edge">Microsoft Edge</option>
+                <option value="google">Google</option>
+                <option value="firefox">Firefox</option>
+                <option value="safari">Safari</option>
+                <option value="opera">Opera</option>
+                <option value="arc">Arc</option>
+            </datalist>
+        </article>
+
+        <article>
+            <h1>Opções de text input</h1>
+            <input type="color" name="color"><br>
+            <input type="date" name="date"><br>
+            <input type="time" name="time"><br>
+            <input type="password" name="password"><br>
+            <input type="number" name="number"><br>
+            <input type="email" name="email" ><br>
+            <input type="url" name="url" ><br>
+            <input type="search" name="search" ><br> <!--Barra de pesquisa - adiciona um X para apagar a barra de pesquisa-->
+            <input type="range" name="range" min="0" max="10" value="8" step="2"><br>
+        </article>
+
         <p>
-            <input type="submit">
+            <input type="reset" value="Oopsie Daisy">
+            <input type="submit" value="Envia lá essa treta">
+            <button>SUBMIT</button>
+
+            <!--NOTA: A button NÃO
+            é do formulário (até porque dá para mais outros s´tios)-->
         </p>
     </form>
+
+    <br>
 </body>
 </html>
